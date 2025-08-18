@@ -11,9 +11,10 @@ router = APIRouter(
 def criar_tarefa(titulo:str, data: Task):
     return  TaskEngine.create_task(titulo)
 
-@router.get("/tarefa/get_task_by_id")
-def get_task_id():
-    pass
+@router.get("/tarefa/get_task_by_id/{id}")
+def get_task_by_id(id: int):
+    response = TaskEngine.get_task_id(id)
+    return response
 
 @router.get("/tarefa/lista_tarefas_do_dia")
 def lista_tarefas_do_dia():
