@@ -18,3 +18,8 @@ class TaskEngine:
             if i.get('id') == id:
                 return i
         return {"message": "Id não encontrado"}
+    
+    def get_task_list():
+        if load_data():
+            return load_data()
+        return {"message": "Não existe nenhuma tarefa cadastrada."}

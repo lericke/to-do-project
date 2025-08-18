@@ -22,7 +22,7 @@ def lista_tarefas_do_dia():
 
 @router.get("/tarefa/lista_todas_tarefas")
 def lista_todas_tarefas():
-    pass
+    return TaskEngine.get_task_list()
 
 @router.put("/tarefa/atualiza_tarefa")
 def atualiza_tarefa():
